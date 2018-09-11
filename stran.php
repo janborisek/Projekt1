@@ -17,9 +17,7 @@
         ?>
         <br>
         <?php
-        //$sql8="SELECT * FROM zaposleni WHERE uporabnik_id=".($_SESSION['id']).";";
-        //$result8=  mysqli_query($link, $sql8);
-        //echo 'Prijavljeni ste kot '.($_SESSION['email']).'';
+        
         $stmt = $pdo->query("SELECT * FROM zaposleni WHERE uporabnik_id=".($_SESSION['id']).";");
             while ($row = $stmt->fetch())
                 {
@@ -45,7 +43,7 @@
                 
             </tr>
             <?php
-               while ($row = mysqli_fetch_array($result8)) {
+               while ($row) {
                    echo "<tr>";
                    echo "<td>".$row['ime']."</td>";
                    echo "<td>".$row['priimek']."</td>";

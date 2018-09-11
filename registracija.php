@@ -2,9 +2,6 @@
 require_once 'povezava.php';
 
 if(isset($_POST['submit'])){
-    <?php
-session_start();
-require_once 'povezava.php';
 
 $i=$_POST['ime'];
 $p=$_POST['priimek'];
@@ -24,15 +21,13 @@ if($user)
  else {
 	
 	$sql = "INSERT INTO uporabniki (ime, priimek, email, geslo) VALUES (?,?,?,?)";
-	$stmt= $dpo->prepare($sql);
+	$stmt= $pdo->prepare($sql);
 	$stmt->execute([$i, $p, $e, $g2]);
     
     echo 'Registrirani';
     header("location: prijava.php");
 }
-?>
 }
-
 ?>
 
 <form method="post">
