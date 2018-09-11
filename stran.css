@@ -1,0 +1,15 @@
+.tabla{
+    border-collapse: collapse;
+    padding: 15px;
+    margin-left: 15px;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+.gumb{
+    background-color: lightgray;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+}

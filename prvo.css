@@ -1,0 +1,14 @@
+html{
+    height: 200px;
+    width: 400px;
+    background: #2056ac;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -280px;
+    margin-left: -100px;
+}
+.linki{
+    color:white;
+}
