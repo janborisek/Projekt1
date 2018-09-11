@@ -1,7 +1,41 @@
 <?php
 require_once 'povezava.php';
+
+if(isset($_POST['submit'])){
+    <?php
+session_start();
+require_once 'povezava.php';
+
+$i=$_POST['ime'];
+$p=$_POST['priimek'];
+$e=$_POST['email'];
+$g=$_POST['geslo'];
+$g2=sha1($g);
+
+$stmt = $pdo->prepare('SELECT * FROM users WHERE email = ?');
+$stmt->execute([$e]);
+$user = $stmt->fetch();
+
+if($user)
+{
+    echo 'Email je že v uporabi';
+    header("location: registracija.php");
+}
+ else {
+	
+	$sql = "INSERT INTO uporabniki (ime, priimek, email, geslo) VALUES (?,?,?,?)";
+	$stmt= $dpo->prepare($sql);
+	$stmt->execute([$i, $p, $e, $g2]);
+    
+    echo 'Registrirani';
+    header("location: prijava.php");
+}
 ?>
-<form action="registracija_preveri.php" method="post">
+}
+
+?>
+
+<form method="post">
     <div>Vnesi ime</div>
     <input type="text" name="ime">
     <br>
