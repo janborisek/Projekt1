@@ -53,3 +53,4 @@ if($user)
     <br>
     <a href="index.php" class="linki">Nazaj na registracijo</a>
 </form>
+

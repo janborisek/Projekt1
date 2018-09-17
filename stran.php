@@ -16,17 +16,14 @@
         include_once 'header.php';
         ?>
         <br>
-        <?php
         
-        $stmt = $pdo->query("SELECT * FROM zaposleni WHERE uporabnik_id=".($_SESSION['id']).";");
-            while ($row = $stmt->fetch())
-                {
-                    echo 'Prijavljeni ste kot '.($_SESSION['email']).'';
-                }
+        <?php
+            echo '<span class="prijava">Prijavljeni ste kot '.($_SESSION['email']).'</span>';
         ?>
+
         <br>
         <br>
-        <a href="dodaj_zaposleni.php" class="gumb">Dodaj zaposlene</a>
+            <a href="dodaj_zaposleni.php" class="gumb">Dodaj zaposlene</a>
         <br>
         <br>
         <table border="1" class="tabla">
@@ -40,34 +37,13 @@
                 <td><b>Začetek dela</b></td>
                 <td><b>Opis</b></td>
                 <td><b>Ocene</b></td>
-                
             </tr>
+
             <?php
-               while ($row) {
-                   echo "<tr>";
-                   echo "<td>".$row['ime']."</td>";
-                   echo "<td>".$row['priimek']."</td>";
-                   echo "<td>".$row['naslov']."</td>";
-                   echo "<td>".$row['email']."</td>";
-                   echo "<td>".$row['telefon']."</td>";
-                   echo "<td>".$row['letnik']."</td>";
-                   echo "<td>".$row['delo_zac']."</td>";
-                   echo "<td>".$row['opis']."</td>";
-                   echo "<td>".'<a href="poglej_ocene.php?email='.$row['email'].'" class="gumb">Poglej ocene</a>'."</td>";
-                   echo "<td>".'<a href="oceni_zaposleni.php?email='.$row['email'].'" class="gumb">Oceni</a>'."</td>";
-                   echo "<td>".'<a href="brisi_zaposleni.php?email='.$row['email'].'" class="gumb">Izbriši</a>'."</td>";
-                   echo "</tr>";
-               }
+               
             ?>
             
         </table>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <br>
         <br>
         <br>
