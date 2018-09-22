@@ -15,7 +15,7 @@
 	<div id="header" class="container">
 		<div id="logo">
         	
-                    <h1><a>Ocenjevalec</a></h1>
+                    <h1><a href="stran.php" class="linki">Ocenjevalec</a></h1>
                         <a href="odjava.php" class="linki">Odjavite se</a></div>
 	</div>
 </div>

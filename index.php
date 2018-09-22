@@ -14,29 +14,7 @@ require_once 'povezava.php';
         <?php
         include_once 'registracija.php';
         ?>
-        <a href="prijava.php" class="linki">Že registrirani? Kliknite tukaj</a>
-        <br>
-        <br>
-        <a href="about.php" class="linki">O projektu</a>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <a href="prijava.php" class="linki">Prijava</a>
         <br>
         <?php
         include_once 'footer.php';

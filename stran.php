@@ -23,7 +23,7 @@
         <br>
         <br>
 <?php
-        $stmt = $pdo->query('SELECT ime, priimek, email, naslov, banka_racun, telefon FROM zaposleni WHERE uporabnik_id = '.($_SESSION['id']).'');
+        $stmt = $pdo->query('SELECT ime, priimek, email, naslov, letnik, delo_zac, banka_racun, telefon, opis FROM zaposleni WHERE uporabnik_id = '.($_SESSION['id']).'');
 
 //Here I echo the first row of the table
 echo "<table border='1' class='tabla'>
@@ -32,8 +32,14 @@ echo "<table border='1' class='tabla'>
             <th>Priimek</th>
             <th>Email</th>
             <th>Naslov</th>
-            <th>Banka</th>
+            <th>Letnik</th>
+            <th>Začetek dela</th>
+            <th>Bančni račun</th>
             <th>Telefon</th>
+            <th>Opis</th>
+            <th>Poglej ocene</th>
+            <th>Oceni</th>
+            <th>Izbriši</th>
         </tr>";
 
     //Here I echo all the members from the database into the table
@@ -43,8 +49,15 @@ echo "<table border='1' class='tabla'>
                 <td>" . $row['priimek'] . "</td>
                 <td>" . $row['email'] . "</td>
                 <td>" . $row['naslov'] . "</td>
+                <td>" . $row['letnik'] . "</td>
+                <td>" . $row['delo_zac'] . "</td>
                 <td>" . $row['banka_racun'] . "</td>
-                <td>" . $row['telefon'] . "</td>";
+                <td>" . $row['telefon'] . "</td>
+                <td>" . $row['opis'] . "</td>
+                <td>".'<a href="poglej_ocene.php?email='.$row['email'].'" class="gumbtabla">Poglej ocene</a>'."</td>
+                <td>".'<a href="oceni_zaposleni.php?email='.$row['email'].'" class="gumbtabla">Oceni</a>'."</td>
+                <td>".'<a href="brisi_zaposleni.php?email='.$row['email'].'" class="gumbtabla">Izbriši</a>'."</td>
+            <tr>";
         
     }
 

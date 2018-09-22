@@ -2,6 +2,7 @@
     border-collapse: collapse;
     padding: 20px;
     margin-left: 20px;
+    margin-top: 10px;
 }
 th, td {
     padding: 5px;
@@ -10,8 +11,15 @@ th, td {
 .gumb{
     background-color: lightgray;
     text-decoration: none;
-    padding: 7px;
+    padding: 6px;
     margin: 20px;
+}
+
+.gumbtabla{
+    background-color: lightgray;
+    text-decoration: none;
+    padding: 4px;
+    margin: 2px;
 }
 
 .prijava{
