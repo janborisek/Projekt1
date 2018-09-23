@@ -5,12 +5,17 @@
 ?>
 
 <?php
-
+    //ko klikne gumb submit se izvede to
     if(isset($_POST['submit'])){
+
+        //premaknem sliko v folder uploads
         move_uploaded_file($_FILES['file']['tmp_name'],"uploads/".$_FILES['file']['name']);
 
+        //shranim v spremenljivki
         $img=$_FILES['file']['name'];
         $email=$_GET['email'];
+
+        //v bazi update-a sliko
         $sql = "UPDATE zaposleni SET slika = ? WHERE email = ?";
         $pdo->prepare($sql)->execute([$img, $email]);
     }
@@ -27,7 +32,7 @@
         include_once 'header.php';
         ?>
 <body>
-
+<!--form za vnos slik -->
 <form action="" method="post" enctype="multipart/form-data">
     Izberi sliko
     <input type="file" name="file">
@@ -39,10 +44,11 @@
 </html>
 
 <?php 
+    //poisce vse o zaposlenih
     $stmt = $pdo->query('SELECT * FROM zaposleni');
     $stmt->execute();
     $user=$stmt->fetch();
-    
+        //echo-am sliko, ce je ni pa default
         echo $user['ime'];
         if($user['slika'] == ""){
             echo "<img width='50' height='50' src='uploads/blank.jpeg' alt='default pic'>";

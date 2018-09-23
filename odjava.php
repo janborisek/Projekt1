@@ -1,4 +1,5 @@
 <?php
+//odjava in izklop vsega
 session_start();
 session_unset();
 session_destroy();

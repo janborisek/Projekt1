@@ -1,4 +1,5 @@
 <?php
+//povezava na bazo
 $host = '127.0.0.1';
 $db   = 'ocene_zaposleni';
 $user = 'root';

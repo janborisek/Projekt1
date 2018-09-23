@@ -15,17 +15,20 @@
         ?>
         <br>
         <?php
+            //izpise pod katerim emailom si prijavljen
             echo '<span class="prijava">Prijavljeni ste kot '.($_SESSION['email']).'</span>';
         ?>
         <br>
         <br>
+        <!--lahko dodas zaposlenega -->
         <a href="dodaj_zaposleni.php" class="gumb">Dodaj zaposlenega</a>
         <br>
         <br>
 <?php
+        //poisce vse podatke o zaposlenih
         $stmt = $pdo->query('SELECT ime, priimek, email, naslov, letnik, delo_zac, banka_racun, telefon, opis FROM zaposleni WHERE uporabnik_id = '.($_SESSION['id']).'');
 
-//Here I echo the first row of the table
+//echo-am naslove tabele
 echo "<table border='1' class='tabla'>
         <tr>
             <th>Ime</th>
@@ -42,7 +45,7 @@ echo "<table border='1' class='tabla'>
             <th>Izbriši</th>
         </tr>";
 
-    //Here I echo all the members from the database into the table
+    //echo-am podatke od zaposlenih, z linki do pogleda ocen, uploada slik, brisanja...
     foreach ($stmt as $row) {
         echo "<tr>
                 <td>" . $row['ime'] . "</td>

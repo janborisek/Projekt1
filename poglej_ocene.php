@@ -17,12 +17,14 @@
         ?>
         <br>
         <?php
+        //prek get-a dobim email tako da uporabnik vidi od koga ocene gleda
         $email=$_GET['email'];
             echo '<span class="prijava">Gledate ocene od '.($_GET['email']).'</span>';
         ?>
         <br>
         <br>
         <?php
+        //lahko doda oceno
             echo '<a href="oceni_zaposleni.php?email='.$email.'" class="gumb">Dodaj oceno</a>';
         ?>
         <br>
@@ -30,7 +32,7 @@
         <?php
         
         
-
+        //najde ocene od tega zaposlenega
         $stmt = $pdo->prepare('SELECT *,o.id as id_o from ocene o inner join zaposleni z on o.zaposlen_id=z.id where z.email=?');
         $stmt->execute([$email]);
         
@@ -45,6 +47,7 @@
         
             //Here I echo all the members from the database into the table
             foreach ($stmt as $row) {
+                //izpise ocene, komentarje, datume v tabeli
                 echo "<tr>
                         
                         <td>" . $row['ocena'] . "</td>
