@@ -14,7 +14,7 @@
 <div id="header-wrapper">
 	<div id="header" class="container">
 		<div id="logo">
-        	
+			<!--Glavni naslov je link na stran.php, spodaj pa odjava na odjava.php, header in vecino css-a iz random templata -->
                     <h1><a href="stran.php" class="linki">Ocenjevalec</a></h1>
                         <a href="odjava.php" class="linki">Odjavite se</a></div>
 	</div>

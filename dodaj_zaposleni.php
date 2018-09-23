@@ -6,6 +6,7 @@
 <head><link rel="stylesheet" type="text/css" href="prvo.css"></head>
 <h1>Dodajanje zaposlenega</h1>
 <form method="post">
+    <!--form za dodanjanje zaposlenih -->
     <div>Vnesi ime</div>
     <input type="text" name="ime">
     <br>
@@ -46,7 +47,7 @@
 </form>
 
 <?php
-    
+    //prek posta vse podatke iz forma dam v spremenljivke
     if(isset($_POST['submit']))
     {
     
@@ -64,17 +65,19 @@
 
     $id=$_SESSION['id'];
 
+    //iscem dan email
     $stmt = $pdo->prepare('SELECT * FROM uporabniki WHERE email = ?');
     $stmt->execute([$e]);
     $user = $stmt->fetch();
     
     if($user)
     {
+        //ta email zaposlenega je ze v uporabi, redirecta na stran.php in lahko poskusis znova
         echo 'Email je že v uporabi';
         header("refresh: 1; stran.php");
     }
      else {
-        
+        //vstavi zaposlenega v bazo
         $sql = "INSERT INTO zaposleni (uporabnik_id, ime, priimek, email, naslov, mesto, posta, letnik, delo_zac, banka_racun, telefon, opis) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
         $stmt= $pdo->prepare($sql);
         $stmt->execute([$id,$i, $p, $e, $n, $m, $po, $l, $d, $b, $t, $o]);

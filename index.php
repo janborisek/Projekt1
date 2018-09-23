@@ -12,8 +12,10 @@ require_once 'povezava.php';
     <body>
         <h1>Ocenjevalec</h1>
         <?php
+        //form za registracijo
         include_once 'registracija.php';
         ?>
+        <!--link na prijava.php ce si ze registriran -->
         <a href="prijava.php" class="linki">Prijava</a>
         <br>
         <?php

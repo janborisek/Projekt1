@@ -19,7 +19,7 @@
         ?>
         <br>
         <br>
-        <a href="dodaj_zaposleni.php" class="gumb">Dodaj zaposlene</a>
+        <a href="dodaj_zaposleni.php" class="gumb">Dodaj zaposlenega</a>
         <br>
         <br>
 <?php
@@ -57,6 +57,7 @@ echo "<table border='1' class='tabla'>
                 <td>".'<a href="poglej_ocene.php?email='.$row['email'].'" class="gumbtabla">Poglej ocene</a>'."</td>
                 <td>".'<a href="oceni_zaposleni.php?email='.$row['email'].'" class="gumbtabla">Oceni</a>'."</td>
                 <td>".'<a href="brisi_zaposleni.php?email='.$row['email'].'" class="gumbtabla">Izbriši</a>'."</td>
+                <td>".'<a href="upload.php?email='.$row['email'].'" class="gumbtabla">Slika</a>'."</td>
             <tr>";
         
     }
