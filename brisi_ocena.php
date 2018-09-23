@@ -8,13 +8,14 @@
 <form method="get">
     <?php 
     echo '<input type="hidden" name="id" value="'.$_GET['id'].'">' ;
+    echo '<input type="hidden" name="email" value="'.$_GET['email'].'">' ;
     $id=$_GET['id'];
+    $email=$_GET['email'];
     ?>
-    <p>Ste prepričani? <br>Izbrisali boste oceno</p>
-    <input type="submit" name="submit" value="Izbriši">
 </form>
 
 <?php
     $stmt = $pdo->prepare("DELETE FROM ocene WHERE id = ?");
     $stmt->execute([$id]);
+    header("location: poglej_ocene.php?email=$email");
 ?>
