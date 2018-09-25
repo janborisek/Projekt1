@@ -11,6 +11,8 @@ require_once 'povezava.php';
 <?php
     include_once 'google.php';
 ?>
+<br>
+<br>
 <form method="post">
     <div>Vnesi email</div>
     <input type="email" name="email">
@@ -51,8 +53,9 @@ if($user)
 }
 //ce ne pa nazaj na prijavo
  else {
+
+    header("refresh: 2; prijava.php");
     echo '<span class="echo">Napačen email ali geslo</span>';
-    header("location: prijava.php");
 }
 }
 

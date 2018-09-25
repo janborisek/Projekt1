@@ -13,8 +13,10 @@ require_once 'povezava.php';
         <h1>Ocenjevalec</h1>
         <?php
         //form za registracijo
-        include_once 'google.php';
         include_once 'registracija.php';
+        echo '<br>';
+        echo '<br>';
+        include_once 'google.php';
         ?>
         <!--link na prijava.php ce si ze registriran -->
         <a href="prijava.php" class="linki">Prijava</a>

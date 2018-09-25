@@ -7,6 +7,8 @@ $i=$_POST['ime'];
 $p=$_POST['priimek'];
 $e=$_POST['email'];
 $g=$_POST['geslo'];
+$geslo2=$_POST['geslo2'];
+if($g===$geslo2){
 $g2=sha1($g);//hasham geslo
 
 //preveri ce je ze email v bazi
@@ -18,7 +20,7 @@ if($user)
 {
     //ce je te da nazaj na registracijo
     echo 'Email je že v uporabi';
-    header("location: registracija.php");
+    header("refresh: 2; registracija.php");
 }
  else {
 	//ce ni te vpise v bazo
@@ -28,6 +30,7 @@ if($user)
     
     echo 'Registrirani';
     header("location: prijava.php");
+}
 }
 }
 ?>
@@ -47,6 +50,10 @@ if($user)
     <br>
     <div>Vnesi geslo</div>
     <input type="password" name="geslo">
+    <br>
+    <br>
+    <div>Še enkrat vnesi geslo</div>
+    <input type="password" name="geslo2">
     <br>
     <br>
     <input type="submit" name="submit" value="Registracija">
