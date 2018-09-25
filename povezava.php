@@ -1,9 +1,9 @@
 <?php
 //povezava na bazo
-$host = '127.0.0.1';
-$db   = 'ocene_zaposleni';
-$user = 'root';
-$pass = '';
+$host = 'localhost';
+$db   = 'ocenjevalnik';
+$user = 'bazica@borisek.si';
+$pass = '12345';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
