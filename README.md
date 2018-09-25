@@ -1,11 +1,10 @@
-# game-library
+Baza ocene_zaposleni
+![alt text](https://i.imgur.com/4lOVVQn.png)
 
-# Setup
+Projekt ocene_zaposleni
 
-1. Create database "ocene_zaposleni"
-2. Import sql file
-3. Install Composer
-4. Run 
-```
-    composer install
-```
+Je aplikacija za šefe, ki lahko dodajajo zaposlene, jih ocenjujejo, plačujejo, nadzorujejo njihov napredek, kako dobro delajo...
+
+Šefi lahko urejajo profile zaposlenih tako, da jim dodajajo/brisejo ocene, spremenijo profilno sliko, jih zbrišejo če jih odpusti
+
+Je možnost prijave preko google računa
