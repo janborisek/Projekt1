@@ -8,6 +8,7 @@ $p=$_POST['priimek'];
 $e=$_POST['email'];
 $g=$_POST['geslo'];
 $geslo2=$_POST['geslo2'];
+//preveri ce sta oba vpisana gesla pravilna
 if($g===$geslo2){
 $g2=sha1($g);//hasham geslo
 
@@ -29,8 +30,11 @@ if($user)
 	$stmt->execute([$i, $p, $e, $g2]);
     
     echo 'Registrirani';
-    header("location: prijava.php");
+    header("refresh: 2; prijava.php");
 }
+}else{
+    echo 'Gesla sta različna';
+    header("refresh:2;index.php");
 }
 }
 ?>

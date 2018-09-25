@@ -17,6 +17,8 @@ require_once 'povezava.php';
         echo '<br>';
         echo '<br>';
         include_once 'google.php';
+        echo '<br>';
+        echo '<br>';
         ?>
         <!--link na prijava.php ce si ze registriran -->
         <a href="prijava.php" class="linki">Prijava</a>
