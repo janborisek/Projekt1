@@ -5,7 +5,7 @@ session_unset();
 session_destroy();
 ob_start();
 echo 'Odjavljeni';
-header("location: index.php");
+header("location: prijava.php");
 ob_end_flush(); 
 exit();
 ?>

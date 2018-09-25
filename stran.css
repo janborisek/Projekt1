@@ -25,3 +25,17 @@ th, td {
 .prijava{
     margin: 20px;
 }
+
+.placilo{
+    border-collapse: collapse;
+    padding: 10px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.placilo1{
+    border-collapse: collapse;
+    padding: 10px;
+    margin-left: 39px;
+    margin-top: 10px;
+}

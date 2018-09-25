@@ -19,24 +19,12 @@
     <input type="email" name="email">
     <br>
     <br>
-    <div>Vnesi naslov</div>
-    <input type="text" name="naslov">
-    <br>
-    <br>
-    <div>Vnesi rojstni dan</div>
-    <input type="date" name="letnik">
+    <div>Vnesi letnik</div>
+    <input type="number" name="letnik">
     <br>
     <br>
     <div>Vnesi datum začetka dela</div>
     <input type="date" name="delo_zac">
-    <br>
-    <br>
-    <div>Vnesi bančni račun</div>
-    <input type="number" name="banka_racun">
-    <br>
-    <br>
-    <div>Vnesi telefon</div>
-    <input type="number" name="telefon">
     <br>
     <br>
     <div>Vnesi opis</div>
@@ -54,13 +42,8 @@
     $i=$_POST['ime'];
     $p=$_POST['priimek'];
     $e=$_POST['email'];
-    $n=$_POST['naslov'];
-    $m=$_POST['mesto'];
-    $po=$_POST['posta'];
     $l=$_POST['letnik'];
     $d=$_POST['delo_zac'];
-    $b=$_POST['banka_racun'];
-    $t=$_POST['telefon'];
     $o=$_POST['opis'];
 
     $id=$_SESSION['id'];
@@ -78,9 +61,9 @@
     }
      else {
         //vstavi zaposlenega v bazo
-        $sql = "INSERT INTO zaposleni (uporabnik_id, ime, priimek, email, naslov, mesto, posta, letnik, delo_zac, banka_racun, telefon, opis) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+        $sql = "INSERT INTO zaposleni (uporabnik_id, ime, priimek, email, letnik, delo_zac, opis) VALUES (?,?,?,?,?,?,?)";
         $stmt= $pdo->prepare($sql);
-        $stmt->execute([$id,$i, $p, $e, $n, $m, $po, $l, $d, $b, $t, $o]);
+        $stmt->execute([$id, $i, $p, $e, $l, $d, $o]);
         
         echo 'Dodajanje uspešno';
         header("location: stran.php");

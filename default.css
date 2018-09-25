@@ -14,7 +14,7 @@ html, body
 		margin: 0px;
 		padding: 0px;
 		background: whitesmoke;
-		font-family: 'Questrial', sans-serif;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
 		font-size: 12pt;
 		color: rgba(0,0,0,.6);
 	}

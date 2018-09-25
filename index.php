@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 require_once 'povezava.php';
 ?>
 
@@ -13,6 +13,7 @@ require_once 'povezava.php';
         <h1>Ocenjevalec</h1>
         <?php
         //form za registracijo
+        include_once 'google.php';
         include_once 'registracija.php';
         ?>
         <!--link na prijava.php ce si ze registriran -->

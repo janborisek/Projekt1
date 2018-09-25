@@ -24,8 +24,9 @@
         <br>
         <br>
         <?php
-        //lahko doda oceno
+        //redirecta te na druge strani kjer lahko zaposlenemu dodaš oceno in ga plačaš
             echo '<a href="oceni_zaposleni.php?email='.$email.'" class="gumb">Dodaj oceno</a>';
+            echo '<a href="denar.php?email='.$email.'" class="gumb">Plačaj zaposlenemu</a>'
         ?>
         <br>
         <br>
@@ -45,9 +46,8 @@
             <th>Izbriši</th>
         </tr>";
         
-            //Here I echo all the members from the database into the table
             foreach ($stmt as $row) {
-                //izpise ocene, komentarje, datume v tabeli
+                //izpiše ocene, komentarje, datume v tabeli
                 echo "<tr>
                         
                         <td>" . $row['ocena'] . "</td>
