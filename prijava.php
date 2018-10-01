@@ -44,11 +44,17 @@ if(isset($_POST['submit'])){
 if($user)
 {
     //se shrani v session ce je pravi
+    if($user['email']=="admin@admin.admin"){
+        $row=$user;
+        $_SESSION['id']=$row['ID'];
+        $_SESSION['email']=$row['email'];
+        header("location: admin.php");
+    }else{
     $row=$user;
     $_SESSION['id']=$row['ID'];
     $_SESSION['email']=$row['email'];
     header("location: stran.php");
-    
+    }
     
 }
 //ce ne pa nazaj na prijavo

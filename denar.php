@@ -21,6 +21,9 @@
     <input type="number" name="vsota">
     <br>
     <br>
+    <input type="date" name="datum">
+    <br>
+    <br>
     <input type="submit" name="submit" value="Nakaži">
 </form>
 <?php
@@ -29,6 +32,7 @@
     //ko je pritisnjen submit, se zazene ta skript
     if(isset($_POST['submit'])){
         $v=$_POST['vsota'];
+        $d=$_POST['datum'];
         //velikost plačaila izpiše
         echo '<span class="tabla">Plačali ste '.$_POST['vsota'].' €</span>';
 
@@ -39,7 +43,7 @@
         $zid = $user['id'];
 
         //vnese denar
-        $sql = "INSERT INTO denar (zaposlen_id, vsota) VALUES (?,?)";
+        $sql = "INSERT INTO denar (zaposlen_id, vsota, datum) VALUES (?,?,?)";
         $stmt= $pdo->prepare($sql);
         $stmt->execute([$zid, $v]);
         
