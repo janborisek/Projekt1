@@ -34,7 +34,7 @@
     $e=$_GET['email'];
     $id=$_SESSION['id'];
 
-
+    if($d<=date("Y-m-d")){
     //isce email pod katerega da oceno
     $stmt = $pdo->prepare('SELECT id FROM zaposleni WHERE email = ?');
     $stmt->execute([$e]);
@@ -51,6 +51,9 @@
         //redirect na ocene tega zaposlenega
         echo 'Dodajanje uspešno';
         header("location: poglej_ocene.php?email=$e");
+    }else{
+        echo 'Ne moreš vpisati ocene v prihodnost';
+    }
     
     }
 

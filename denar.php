@@ -21,21 +21,22 @@
     <input type="number" name="vsota">
     <br>
     <br>
+    <div>Datum plačila</div>
     <input type="date" name="datum">
     <br>
     <br>
-    <input type="submit" name="submit" value="Nakaži">
+    <input type="submit" name="submit" value="Plačaj">
 </form>
 <?php
     //email ge-am iz url-ja
     $email=$_GET['email'];
     //ko je pritisnjen submit, se zazene ta skript
     if(isset($_POST['submit'])){
+        
         $v=$_POST['vsota'];
         $d=$_POST['datum'];
-        //velikost plačaila izpiše
-        echo '<span class="tabla">Plačali ste '.$_POST['vsota'].' €</span>';
-
+        if($v>0){
+        
         //isce email pod katerega da denar
         $stmt = $pdo->prepare('SELECT id FROM zaposleni WHERE email = ?');
         $stmt->execute([$email]);
@@ -45,7 +46,12 @@
         //vnese denar
         $sql = "INSERT INTO denar (zaposlen_id, vsota, datum) VALUES (?,?,?)";
         $stmt= $pdo->prepare($sql);
-        $stmt->execute([$zid, $v]);
+        $stmt->execute([$zid, $v,$d]);
+        //velikost plačila izpiše
+        echo '<span class="tabla">Plačali ste '.$_POST['vsota'].' €</span>';
+        }else{
+            echo '<span class="tabla">Vnesite pozitivno število</span>';
+        }
         
     }
 ?>

@@ -1,0 +1,61 @@
+[01-Oct-2018 12:48:59 Europe/Ljubljana] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/boriseks/public_html/povezava.php:22
+Stack trace:
+#0 /home/boriseks/public_html/index.php(3): require_once()
+#1 {main}
+  thrown in /home/boriseks/public_html/povezava.php on line 22
+[01-Oct-2018 12:49:08 Europe/Ljubljana] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/boriseks/public_html/povezava.php:22
+Stack trace:
+#0 /home/boriseks/public_html/index.php(3): require_once()
+#1 {main}
+  thrown in /home/boriseks/public_html/povezava.php on line 22
+[01-Oct-2018 12:59:57 Europe/Ljubljana] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/boriseks/public_html/povezava.php:22
+Stack trace:
+#0 /home/boriseks/public_html/index.php(3): require_once()
+#1 {main}
+  thrown in /home/boriseks/public_html/povezava.php on line 22
+[01-Oct-2018 13:00:01 Europe/Ljubljana] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/boriseks/public_html/povezava.php:22
+Stack trace:
+#0 /home/boriseks/public_html/index.php(3): require_once()
+#1 {main}
+  thrown in /home/boriseks/public_html/povezava.php on line 22
+[01-Oct-2018 13:00:03 Europe/Ljubljana] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/boriseks/public_html/povezava.php:22
+Stack trace:
+#0 /home/boriseks/public_html/index.php(3): require_once()
+#1 {main}
+  thrown in /home/boriseks/public_html/povezava.php on line 22
+[01-Oct-2018 13:00:10 Europe/Ljubljana] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/boriseks/public_html/povezava.php:22
+Stack trace:
+#0 /home/boriseks/public_html/index.php(3): require_once()
+#1 {main}
+  thrown in /home/boriseks/public_html/povezava.php on line 22
+[01-Oct-2018 13:00:19 Europe/Ljubljana] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/boriseks/public_html/povezava.php:22
+Stack trace:
+#0 /home/boriseks/public_html/index.php(3): require_once()
+#1 {main}
+  thrown in /home/boriseks/public_html/povezava.php on line 22
+[01-Oct-2018 13:00:29 Europe/Ljubljana] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/boriseks/public_html/povezava.php:22
+Stack trace:
+#0 /home/boriseks/public_html/index.php(3): require_once()
+#1 {main}
+  thrown in /home/boriseks/public_html/povezava.php on line 22
+[01-Oct-2018 13:00:32 Europe/Ljubljana] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/boriseks/public_html/povezava.php:22
+Stack trace:
+#0 /home/boriseks/public_html/index.php(3): require_once()
+#1 {main}
+  thrown in /home/boriseks/public_html/povezava.php on line 22
+[02-Oct-2018 09:07:05 Europe/Ljubljana] PHP Fatal error:  Uncaught Error: Cannot use object of type PDOStatement as array in /home/boriseks/public_html/poglej_ocene.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/boriseks/public_html/poglej_ocene.php on line 48
+[02-Oct-2018 09:07:07 Europe/Ljubljana] PHP Fatal error:  Uncaught Error: Cannot use object of type PDOStatement as array in /home/boriseks/public_html/poglej_ocene.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/boriseks/public_html/poglej_ocene.php on line 48
+[02-Oct-2018 09:07:08 Europe/Ljubljana] PHP Fatal error:  Uncaught Error: Cannot use object of type PDOStatement as array in /home/boriseks/public_html/poglej_ocene.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/boriseks/public_html/poglej_ocene.php on line 48
+[02-Oct-2018 09:07:09 Europe/Ljubljana] PHP Fatal error:  Uncaught Error: Cannot use object of type PDOStatement as array in /home/boriseks/public_html/poglej_ocene.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/boriseks/public_html/poglej_ocene.php on line 48

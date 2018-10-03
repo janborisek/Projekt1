@@ -1,8 +1,12 @@
 <?php
 //povezava na bazo
+//$host = 'localhost';
 $host = '127.0.0.1';
+//$db   = 'boriseks_ocene_zaposleni';
 $db = 'ocene_zaposleni';
+//$user = 'boriseks';
 $user = 'root';
+//$pass = 'admin123';
 $pass = '';
 $charset = 'utf8mb4';
 

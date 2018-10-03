@@ -45,6 +45,9 @@
             <th>Datum</th>
             <th>Izbriši</th>
         </tr>";
+    $date = $row['datum'];
+    $date = new DateTime($date);
+    $datum = $date->format("d. m. Y");
         
             foreach ($stmt as $row) {
                 //izpiše ocene, komentarje, datume v tabeli
@@ -52,7 +55,7 @@
                         
                         <td>" . $row['ocena'] . "</td>
                         <td>" . $row['komentar'] . "</td>
-                        <td>" . $row['datum'] . "</td>
+                        <td>" . $datum . "</td>
                         <td>".'<a href="brisi_ocena.php?id='.$row['id_o'].'&email='.$row['email'].'" class="gumbtabla">Izbriši</a>'."</td>
                         </tr>";
                         

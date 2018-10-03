@@ -21,7 +21,7 @@
 <form class="placilo" action="" method="post" enctype="multipart/form-data">
     Izberi sliko
     <input type="file" name="file">
-    <input type="submit" name="submit">
+    <input type="submit" name="submit" value="Posodobi sliko">
 </form>
 <?php
     //ko klikne gumb submit se izvede to
@@ -57,22 +57,31 @@
      
 ?>
 <?php
+    //echo ime, priimek, email
     echo "<br>";
     echo '<span class="placilo"> '.$user['ime'].'  '.$user['priimek'].'</span>';
     echo "<br>";
-
+        echo '<span class="placilo"> '.$user['email'].'</span>';
+    echo "<br>";
+    //zbere vse o plačilih od določenega zaposlenega
     $stmt = $pdo->query('SELECT * FROM denar WHERE zaposlen_id = '.($user['ID']).'');
 
+
+    $date = $row['datum'];
+    $date = new DateTime($date);
+    $datum = $date->format("d. m. Y");
     //echo-am naslove tabele
     echo "<table border='1' class='placilo1'>
             <tr>
-                <th>Plačila</th>
+                <th>Plačila v €</th>
+                <th>Datum</th>
             </tr>";
     
-        //echo-am podatke od zaposlenih, z linki do pogleda ocen, uploada slik, brisanja...
+        //echo-am podatke od plačilih
         foreach ($stmt as $row) {
             echo "<tr>
                     <td>" . $row['vsota'] . "</td>
+                    <td>" . $datum . "</td>
                 <tr>";
             
         }

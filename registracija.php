@@ -29,7 +29,8 @@ if($user)
 	$stmt= $pdo->prepare($sql);
 	$stmt->execute([$i, $p, $e, $g2]);
     
-    echo 'Registrirani';
+    echo 'Uspešno registriranje';
+    echo '<br>';
     header("refresh: 2; prijava.php");
 }
 }else{

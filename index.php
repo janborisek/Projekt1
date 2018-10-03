@@ -15,13 +15,14 @@ require_once 'povezava.php';
         //form za registracijo
         include_once 'registracija.php';
         echo '<br>';
-        echo '<br>';
         include_once 'google.php';
         echo '<br>';
         echo '<br>';
         ?>
         <!--link na prijava.php ce si ze registriran -->
         <a href="prijava.php" class="linki">Prijava</a>
+        <br>
+        <br>
         <br>
         <?php
         include_once 'footer.php';

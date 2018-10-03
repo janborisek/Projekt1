@@ -12,7 +12,7 @@ require ("vendor/autoload.php");
 $g_client = new Google_Client();
 $g_client->setClientId("854240138875-d8va9bo7nib88oh5ful4t3h4ruo41g3s.apps.googleusercontent.com");
 $g_client->setClientSecret("lBp1NYQtl__q2z7znA7LWYl7");
-$g_client->setRedirectUri("https://localhost/ocene_zaposleni/google.php");
+$g_client->setRedirectUri("http://localhost/ocene_zaposleni/google.php");
 $g_client->setScopes("email");
 //Step 2 : Create the url
 $auth_url = $g_client->createAuthUrl();
