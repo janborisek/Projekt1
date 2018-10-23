@@ -1,13 +1,33 @@
-<<<<<<< HEAD
-=======
-Baza ocene_zaposleni
+
 ![alt text](https://i.imgur.com/4lOVVQn.png)
 
-Projekt ocene_zaposleni
+# Ocene_zaposleni
 
-Je aplikacija za šefe, ki lahko dodajajo zaposlene, jih ocenjujejo, plačujejo, nadzorujejo njihov napredek, kako dobro delajo...
+Website for a php school project. User can add, edit, rate, comment employees, add profile images.
+Requirements:
 
-Šefi lahko urejajo profile zaposlenih tako, da jim dodajajo/brisejo ocene, spremenijo profilno sliko, jih zbrišejo če jih odpusti
+    Insert, Update, Delete
+    File Uploading
+    Atleast 4 tables
+    Register and Login
+    Safe SQL queries
+    Safe data deletion or modification (check ownership)
+    Website design
+    User can login with Facebook, Twitter, Google, Steam (implement 1 solution)
 
-Je možnost prijave preko google računa
->>>>>>> d65a4e117578f01de99dcdd458351d9b732107f0
+# Run Locally
+
+    Navigate into htdocs directory
+    Run this command: git clone https://github.com/janborisek/ocene_zaposleni.git
+    Move into the cloned directory: cd ocene_zaposleni
+    Modify database connection settings in povezava.php
+    Create database named ocene_zaposleni
+    Import ocene_zaposleni.sql into database
+    Run: composer install
+    Project is now accessible on localhost
+
+# Technologies Used
+
+    PHP
+    Composer
+    MySQL
